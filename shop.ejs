@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title %></title>
+    <link rel="stylesheet" href="header-nav.css">
+    <link rel="stylesheet" href="slideshow.css">
+    <link rel="stylesheet" href="content.css">
+    <link rel="stylesheet" href="modal-window.css">
+</head>
+<body style="margin: 0;font-family: Arial, Helvetica, sans-serif;">
+
+    <div class="modal-window">
+        <div class="modal-content animation-appear">
+            
+        </div>
+    </div>
+
+    <div class="wrapper">
+        <header>
+            <div class="header">
+                <div class="item">
+                    <span class="title-logotype">SHOP-MAGNIFICENT</span>
+                </div>
+                <div class="item">
+                    <input type="text" class="input-search" placeholder="Search..." autocomplete="off" >
+                    <button type="submit" class="button-search">Search</button>
+                </div>
+                <div class="item">
+                    <div class="menu">
+                        <div class="line"></div>
+                        <div class="line"></div>
+                        <div class="line"></div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <div class="main-content">
+            <div class="side-navigation">
+                <div class="container-side">
+                    <div class="link-side">Смартфоны</div>
+                    <div class="link-side">Ноутбуки</div>
+                    <div class="link-side">Телевизоры</div>
+                    <div class="link-side">Пылесосы</div>
+                    <div class="link-side">Чайники</div>
+                    <div class="link-side">Книги</div>
+                    <div class="link-side">Мебель</div>
+                    <div class="link-side">Лампы</div>
+                </div>
+                <div class="container-side" style="margin-top: 10px;">
+                    <div class="link-side">Сад</div>
+                    <div class="link-side">Градусники</div>
+                    <div class="link-side">Мойки</div>
+                    <div class="link-side">Окна</div>
+                </div>
+            </div>
+            <div class="main-container">
+                <div class="slide__container">
+                    <div class="slideshow">
+                        <div class="img__container">
+                            <img src="slideshow/Content1.jpg" alt="">
+                        </div>
+                        <div class="img__container">
+                            <img src="slideshow/Content2.jpg" alt="">
+                        </div>
+                        <div class="img__container">
+                            <img src="slideshow/Content3.jpg" alt="">
+                        </div>
+        
+                        <a class="prev" onclick="nextSlide(-1)">&#10094;</a>
+                        <a class="next" onclick="nextSlide(1)">&#10095;</a>
+                    </div>
+                    <div style="text-align: center;margin-top: 20px;">
+                        <span class="pointMove" onclick="currentSlide(1)"></span>
+                        <span class="pointMove" onclick="currentSlide(2)"></span>
+                        <span class="pointMove" onclick="currentSlide(3)"></span>
+                    </div>
+                </div>
+                <div class="catalog-goods">
+                    <% if(goods.length) { %>
+                        <% goods.forEach(({header, img, description}) => { %>
+                            <div class="goods-one">
+                                <h2><%= header %></h2>
+                                <img src="goods-img/<%= img %>" alt="PHOTO" style="width:100%;">
+                                <p><%= description %></p>
+                                <button type="button">Buy</button>
+                            </div>
+                        <% }) %>
+                    <% } %>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="slideshow.js"></script>
+    <script src="modal.js"></script>
+</body>
+</html>

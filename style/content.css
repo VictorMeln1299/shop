@@ -1,0 +1,66 @@
+.main-content {
+    display: flex;
+    justify-content: center;
+}
+
+.side-navigation {
+    width: 25%;
+    padding: 20px;
+}
+
+.container-side {
+    border: 1px solid rgb(200, 200, 200);
+    padding: 10px;
+}
+
+.link-side {
+    text-align: center;
+    display: block;
+    padding: 10px;
+    font-size: 24px;
+    background-color: rgb(220, 220, 220);
+    color: black;
+    border-radius: 8px;
+    margin: 10px 0;
+    cursor: pointer;
+}
+
+.link-side:hover {
+    background-color: rgb(210, 210, 210);
+}
+
+.main-container {
+    width: 75%;
+}
+
+.catalog-goods {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    justify-content: center;
+    align-content: center;
+}
+
+.goods-one {
+    padding: 8px;
+    border: 1px solid rgb(180, 180, 180);
+    margin-left: -1px;
+    margin-top: -1px;
+}
+
+.goods-one h2 {
+    text-align: center;
+}
+
+.goods-one button{
+    width: 100%;
+    padding: 6px;
+    background-color: purple;color: white;
+    font-size: 18px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.goods-one button:hover {
+    background-color: rgb(198, 0, 198);
+}
